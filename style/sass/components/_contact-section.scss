@@ -1,0 +1,22 @@
+.contact-section {
+  margin: auto;
+  padding-bottom: 40px;
+  background-color: #fff5f6;
+
+  & > .container {
+    margin: auto;
+    padding: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-section {
+    margin: auto;
+    padding-bottom: 170px;
+
+    & > .container {
+      max-width: 768px;
+      padding: 0 35px;
+    }
+  }
+}
