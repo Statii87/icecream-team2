@@ -1,15 +1,13 @@
 .button-list__item {
-  position: relative;
   .firts-btn {
     background-color: #d41342;
     border: #d41342;
-
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
-    text-align: center;
+    // text-align: center;
     padding: 10px 19px;
 
     color: #ffffff;
@@ -24,7 +22,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
-    text-align: center;
+    // text-align: center;
     padding: 10px 19px;
   }
 }
