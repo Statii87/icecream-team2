@@ -155,16 +155,10 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .section-contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 35px;
-
-    &__item {
-      padding: 50px 70px;
-    }
+@media screen and (min-width: 1280px) {
+  .section-contact__item {
+    flex-basis: 33%;
+    flex-grow: 1;
+    // padding: 50px 43px 62px;
   }
 }
