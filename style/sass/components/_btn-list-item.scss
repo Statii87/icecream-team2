@@ -7,7 +7,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
-    // text-align: center;
     padding: 10px 19px;
 
     color: #ffffff;
@@ -22,7 +21,24 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
-    // text-align: center;
     padding: 10px 19px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-list__item {
+    .firts-btn {
+      transition: transform ease-in-out;
+
+      &:hover {
+        transform: scale(1) translate(0, -50%);
+      }
+    }
+    .second-btn {
+      transition: transform ease-in-out;
+      &:hover {
+        transform: scale(1) translate(0, -50%);
+      }
+    }
   }
 }

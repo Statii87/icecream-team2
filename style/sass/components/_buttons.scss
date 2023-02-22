@@ -1,14 +1,25 @@
 .button-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  gap: 20px;
+  gap: 10px;
 
   &__btn {
     width: 198px;
     height: 45px;
     border-radius: 22px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 }
