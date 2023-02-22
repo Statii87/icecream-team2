@@ -1,0 +1,12 @@
+.btn-icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-icon {
+    margin-left: 20px;
+  }
+}

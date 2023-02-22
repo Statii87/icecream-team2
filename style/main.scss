@@ -1,0 +1,27 @@
+@import "../style/sass/utils/vars";
+@import "../style/sass/components/contact-section";
+@import "../style/sass/components/sectoin-card";
+@import "../style/sass/components/buttons";
+@import "../style/sass/components/btn-list-item";
+@import "../style/sass/components/btn-icon-svg";
+
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  /* outline: 5px solid limegreen !important; */
+}
+
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+  text-decoration: none;
+}

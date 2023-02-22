@@ -1,0 +1,158 @@
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+
+  &__item {
+    background-color: #fff;
+    border-radius: 24px;
+    margin: auto;
+    padding: 43px 20px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.4s ease-in;
+
+    &:hover,
+    &:focus,
+    &:focus {
+      box-shadow: rgba(209, 10, 10, 0.35) 0px 5px 15px,
+        rgba(91, 25, 25, 0.35) 0px 5px 15px;
+    }
+  }
+
+  &__presentation,
+  &__schedule {
+    font-family: $fontDM;
+    font-size: 12px;
+    line-height: 23px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 25px;
+  }
+
+  &__place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-family: DM Sans, sans-serif;
+    letter-spacing: 0.04em;
+  }
+  &__title {
+    font-family: $fontDM;
+    font-weight: $fontW5;
+    font-size: 16px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+    color: #000000;
+  }
+
+  &__subtitle {
+    font-family: $fontDM;
+    font-weight: $fontW5;
+    font-size: 16px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+    color: #907e82;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  & a {
+    font-family: $fontDM;
+    font-style: normal;
+    font-weight: $fontW5;
+    font-size: 16px;
+    color: #907e82;
+  }
+}
+
+.section-contact__plase--first-place,
+.section-contact__plase--third-place {
+  background-color: #f0d1a5;
+  width: 138px;
+  height: 28px;
+  border-radius: 6px;
+  color: #ffff;
+  font-family: $fontDM;
+  font-weight: $fontW5;
+  font-size: 16px;
+  line-height: 186%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 25px;
+}
+
+.section-contact__plase--second-place {
+  background-color: #c2e297;
+  width: 138px;
+  height: 28px;
+  border-radius: 6px;
+  color: #ffff;
+  font-family: $fontDM;
+  font-weight: $fontW5;
+  font-size: 16px;
+  line-height: 186%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 25px;
+}
+
+.section-contact__title--days {
+  color: #000000;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.section-contact__title--time {
+  color: #ffa5ba;
+  font-family: $fontDM;
+  font-style: normal;
+  font-weight: $fontW5;
+  font-size: 15px;
+  line-height: 186%;
+  gap: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 50px 30px;
+    }
+
+    &__plase {
+      width: 73px;
+      height: 28px;
+    }
+    &___title {
+      margin-bottom: 14px;
+    }
+  }
+
+  .section-contact__title--days {
+    margin-bottom: 14px;
+  }
+}
