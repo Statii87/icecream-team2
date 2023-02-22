@@ -28,16 +28,16 @@
 @media screen and (min-width: 768px) {
   .button-list__item {
     .firts-btn {
-      transition: transform ease-in-out;
+      transition: transform 0.3s ease-in;
 
       &:hover {
-        transform: scale(1) translate(0, -50%);
+        transform: scale(1) translate(0, -25%);
       }
     }
     .second-btn {
-      transition: transform ease-in-out;
+      transition: transform 0.3s ease-in;
       &:hover {
-        transform: scale(1) translate(0, -50%);
+        transform: scale(1) translate(0, -25%);
       }
     }
   }
