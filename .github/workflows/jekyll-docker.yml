@@ -1,45 +1,51 @@
-name: Jekyll site CI
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build:
-
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout source Git branch
-      uses: actions/checkout@v3
-      with:
-        ref: main
-        fetch-depth: 10
-        submodules: true
-    
-    - name: HTML5 Validator
-      # You may pin to the exact commit or the version.
-      # uses: Cyb3r-Jak3/html5validator-action@41633d488eb36e18fd1a95ffc83daf1bf22a75bd
-      uses: Cyb3r-Jak3/html5validator-action@v7.2.0
-      with:
-        # Path of the files to test
-        root: ./
-    
-    - name: Sass Build
-      # You may pin to the exact commit or the version.
-      # uses: gha-utilities/sass-build@400d8c244fab46ebbda471f7a0a076d877c297cb
-      uses: gha-utilities/sass-build@v0.4.11
-      with:
-        # Relative path(s) to SASS or SCSS file, eg. _scss/main.scss
-        source: ./style/main.scss
-        # Path(s) compiled CSS should be saved, eg. ~/workspace_sass/assets/css/main.css
-        destination: ./css/main.min.css
-
-    - uses: actions/checkout@v3
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Sass Build
+        uses: gha-utilities/sass-build@v0.4.11
+        with:
+          source: ./style/main.scss
+          destination: ./css/main.min.css
+      - name: HTML5 Validator
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        with:
+          root: ./
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
