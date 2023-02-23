@@ -1,0 +1,112 @@
+.product {
+   margin: auto;
+   padding-top: 121px;
+   padding-bottom: 98px;
+   background-color: #E5E5E5;
+   @media screen and (min-width:768px) {
+      padding-top: 122px;
+      padding-bottom: 112px;
+   }
+   @media screen and (min-width:1200px) {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+}
+
+/*  Products header  */
+
+.product__p {
+    margin-bottom: 15px;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFA5BA;   
+    @media screen and (min-width:768) {
+        font-size: 26px;
+        line-height: 1.15;
+    }
+    @media screen and (min-width:1200) {
+        font-size: 30px;
+  }
+}
+
+.product__title {
+    margin-bottom: 144px;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #D41443;
+    @media screen and (min-width:768px) {
+        margin-bottom: 150px;
+        font-size: 48px;
+      }
+      @media screen and (min-width:1200px) {
+        margin-bottom: 259px;
+        font-size: 58px;
+    }
+}
+
+/*  Product list  */
+
+@media screen and (min-width:768px) {
+    .product__list {
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: -10px;
+      }
+}
+
+@media screen and (min-width:1200px) {
+    .product__list {
+        display:flex;
+        justify-content: center;
+        margin: -15px;
+      }
+}
+
+/*  Product item  */
+
+.product__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 0 auto;
+    width: 368px;
+    height: 535px;
+    border-radius: 24px;
+    text-align: center;
+    @media screen and (max-width:768) {
+        &:not(:last-child) {
+            margin-bottom: 130px;
+        }
+    }
+    &:nth-child(1) {
+        background-color: #FFA5BA;
+        &::before {
+            content:'';
+            position: absolute;
+            left: 15%;
+            top: -250px;
+            transform: translateX(-50px);
+            z-index: 60;
+            width: 368px;
+            height: 394px;
+            background-image: url(/src/images/products/icecream320.png);
+            background-size: 368px 394px;
+        }
+    }
+}
+
+
