@@ -376,7 +376,9 @@
           </div>
         </div>
       </section>
+
       <!--------------------SECTION 5 START  ------------------------------------------------------->
+
       <section class="contact-section">
         <div class="container">
           <h2 class="section__title" hidden>
@@ -473,13 +475,43 @@
 
           <ul class="button-list">
             <li class="button-list__item">
-              <button class="button-list__btn firts-btn data-modal-open-l">
+              <button class="button-list__btn firts-btn open-button_1">
                 Our Locations
                 <svg class="btn-icon">
                   <use href="./src/image/symbol-defs.svg#icon-Vector-1"></use>
                 </svg>
               </button>
             </li>
+
+            <!--------popup  modal 1 -->
+
+            <dialog class="modal_1">
+              <button type="button" class="close-button"></button>
+              <h3 class="inner_form__title">We will be glad to see you</h3>
+              <iframe
+                class="modal_1__map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d355111.2513208778!2d21.268241482002622!3d45.94515586816834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d9efab7655d%3A0x7d0a4cd76de681f!2sZanoni!5e0!3m2!1sro!2sro!4v1677168931972!5m2!1sro!2sro"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <p class="modal_1__str">
+                Strada Ciprian Porumbescu 29, Timișoara 300425
+              </p>
+              <button class="modal_map_btn">
+                <a
+                  target="_blank"
+                  href="https://goo.gl/maps/8ztkL6uQNfBRvNRc8"
+                  class="modal_map_btn__adr"
+                  >Open in Google maps</a
+                >
+              </button>
+            </dialog>
+
+            <!-- end popup  modal  -->
 
             <li class="button-list__item">
               <button
