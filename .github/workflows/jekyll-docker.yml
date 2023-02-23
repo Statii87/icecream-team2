@@ -27,7 +27,7 @@ jobs:
         # Relative path(s) to SASS or SCSS file, eg. _scss/main.scss
         source: ./style/main.scss
         # Path(s) compiled CSS should be saved, eg. ~/workspace_sass/assets/css/main.css
-        destination: ./css/main.css
+        destination: ./css/main.min.css
 
     - uses: actions/checkout@v3
     - name: Build the site in the jekyll/builder container
