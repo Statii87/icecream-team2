@@ -4,6 +4,7 @@
 @import "../style/sass/components/buttons";
 @import "../style/sass/components/btn-list-item";
 @import "../style/sass/components/btn-icon-svg";
+@import "../style/sass/components/footer";
 
 * {
   margin-block-start: 0;
@@ -24,4 +25,10 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 0;
   text-decoration: none;
+}
+
+.footer__section {
+  position: relative;
+  background-color: blue;
+  min-width: 320px;
 }
