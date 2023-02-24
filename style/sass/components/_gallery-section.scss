@@ -1,0 +1,46 @@
+.gallery__container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.gallery__list {
+  display: flex;
+  gap: 3px;
+}
+
+.gallery__list-itemlist {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  img {
+    width: 44px;
+    height: 44px;
+  }
+  .larger-image {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.gallery__list-item {
+  &:first-child {
+    position: relative;
+    top: 25px;
+  }
+  &:nth-child(3) {
+    position: relative;
+    top: -25px;
+  }
+  &:nth-child(5) {
+    position: relative;
+    top: -15px;
+  }
+  &:nth-child(6) {
+    position: relative;
+    top: 25px;
+  }
+}
