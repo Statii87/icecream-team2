@@ -1,0 +1,113 @@
+.modal_1 {
+  background-color: white;
+  border: 3px solid #ffb8ca;
+  position: fixed;
+  max-width: 550px;
+  height: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  margin: auto auto;
+  padding: 30px;
+
+  &__map {
+    display: flex;
+    justify-content: center;
+    max-width: 450px;
+    height: 450px;
+    border: 2px solid $subtitle_color;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+  }
+
+  &__str {
+    color: #d41443;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: $fontW7;
+  }
+  &__title {
+    text-align: center;
+    font-family: $fontDM;
+    letter-spacing: 0.03em;
+    font-size: 25px;
+    font-weight: $fontW7;
+    color: #d41443;
+    margin-bottom: 15px;
+    margin-top: 12px;
+  }
+
+  .modal_1__close-btn {
+    fill: #ffb8ca;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+}
+
+.modal__map-btn {
+  font-family: $fontDM;
+  line-height: 21px;
+  font-size: 16px;
+  font-weight: 700;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #fff;
+  border: 2px solid #ffb8ca;
+  padding: 0 15px;
+  color: #ffb8ca;
+  transform: scale(1);
+  transition: all 0.25s linear;
+}
+
+.modal_map_btn {
+  font-family: $fontDM;
+  letter-spacing: -spacing;
+  line-height: 21px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 auto;
+  max-width: 200px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #fff;
+  border: 2px solid #ffb8ca;
+  padding: 0 15px;
+  color: #ffb8ca;
+  transition: transform 0.3s ease-in;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    max-width: 210px;
+    transform: scale(1.1);
+    background-color: #ffb8ca;
+  }
+
+  &__adr {
+    color: #d41443;
+
+    &:hover {
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+}
+
+.close-button {
+  background-color: #fff;
+  color: #ffb8ca;
+  border: 1px solid #ffb8ca;
+  border-radius: 50%;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 12px;
+  margin: -10;
+}
