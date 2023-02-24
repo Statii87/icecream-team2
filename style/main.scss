@@ -7,6 +7,9 @@
 @import "../style/sass/components/products-section";
 @import "../style/sass/components/abouot-section";
 @import "../style/sass/components/gallery-section";
+@import "../style/sass/components/modal";
+@import "../style/sass/components/modal-1";
+@import "../style/sass/components/modal-2";
 
 * {
   margin-block-start: 0;
@@ -26,5 +29,9 @@ ul {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0;
+  text-decoration: none;
+}
+
+a {
   text-decoration: none;
 }
