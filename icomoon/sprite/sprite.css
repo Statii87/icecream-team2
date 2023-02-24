@@ -1,0 +1,21 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-github {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-telegram {
+  width: 32px;
+  height: 32px;
+  background-position: -48px 0;
+}
+.icon-Group {
+  width: 32px;
+  height: 32px;
+  background-position: -96px 0;
+}
+
