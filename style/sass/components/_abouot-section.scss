@@ -1,0 +1,48 @@
+@import "../utils/vars";
+.about-section {
+  background-color: $bg_color;
+  margin: 0 auto;
+}
+.advantages-section {
+  background-color: $bg_color;
+  margin: 0 auto;
+}
+.title__container {
+  margin: 0 auto;
+  &--subtitle {
+    font-size: 18px;
+    line-height: 1.16;
+    text-transform: uppercase;
+    font-family: "Titan One", cursive;
+    color: $subtitle_color;
+    text-align: center;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 15px;
+  }
+
+  &--title {
+    font-family: "Titan One", cursive;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $title_color;
+    text-align: center;
+    max-width: 400px;
+    max-width: 200px;
+    margin: auto;
+  }
+}
+.cow-container {
+  &__img {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+}
+.description-container {
+  background-image: url("../src/images/about-section/bg-section.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
