@@ -43,6 +43,48 @@
 }
 .description-container {
   background-image: url("../src/images/about-section/bg-section.png");
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 90% 45%;
+}
+.grid-about {
+  list-style-type: none;
+  margin-left: 20px;
+  &__item {
+    font-family: $fontDM;
+    font-weight: $fontW5;
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 220px;
+
+    &--firts {
+      color: $black_color;
+    }
+
+    &--second {
+      color: $text_color;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+}
+.about-button {
+  width: 176px;
+  height: 44px;
+  background: $white_color;
+  border-radius: 22px;
+  border: transparent;
+  font-family: $fontDM;
+  font-weight: $fontW7;
+  font-size: 14px;
+  line-height: 1.28;
+  color: $title_color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $bg_button_hover;
+    cursor: pointer;
+    transform: scale(1.2);
+  }
 }
