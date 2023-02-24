@@ -4,6 +4,10 @@
 @import "../style/sass/components/buttons";
 @import "../style/sass/components/btn-list-item";
 @import "../style/sass/components/btn-icon-svg";
+@import "../style/sass/components/header-section";
+@import "../style/sass/components/mobil-menu";
+@import "../style/sass/components/top-section";
+@import "../style/sass/components/hero-section";
 
 * {
   margin-block-start: 0;
@@ -14,6 +18,9 @@
   box-sizing: border-box;
   list-style-type: none;
   /* outline: 5px solid limegreen !important; */
+}
+body {
+  font-family: "DM Sans";
 }
 
 ul {

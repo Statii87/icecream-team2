@@ -1,0 +1,22 @@
+.header-top {
+  display: flex;
+  margin: 0 1%;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 37px;
+  padding-bottom: 37px;
+}
+.nav__list {
+  display: flex;
+  width: 541px;
+  justify-content: space-around;
+  background-color: beige;
+}
+.button-buy {
+  width: 159px;
+  height: 44px;
+  left: 1025px;
+  top: 40px;
+  background: #ffffff;
+  border-radius: 22px;
+}
