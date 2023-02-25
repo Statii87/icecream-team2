@@ -1,0 +1,90 @@
+@import "../utils/vars";
+.about-section {
+  background-color: $bg_color;
+  margin: 0 auto;
+}
+.advantages-section {
+  background-color: $bg_color;
+  margin: 0 auto;
+}
+.title__container {
+  margin: 0 auto;
+  &--subtitle {
+    font-size: 18px;
+    line-height: 1.16;
+    text-transform: uppercase;
+    font-family: "Titan One", cursive;
+    color: $subtitle_color;
+    text-align: center;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 15px;
+  }
+
+  &--title {
+    font-family: "Titan One", cursive;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $title_color;
+    text-align: center;
+    max-width: 400px;
+    max-width: 200px;
+    margin: auto;
+  }
+}
+.cow-container {
+  &__img {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+}
+.description-container {
+  background-image: url("../src/images/about-section/bg-section.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 90% 45%;
+}
+.grid-about {
+  list-style-type: none;
+  margin-left: 20px;
+  &__item {
+    font-family: $fontDM;
+    font-weight: $fontW5;
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 220px;
+
+    &--firts {
+      color: $black_color;
+    }
+
+    &--second {
+      color: $text_color;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+}
+.about-button {
+  width: 176px;
+  height: 44px;
+  background: $white_color;
+  border-radius: 22px;
+  border: transparent;
+  font-family: $fontDM;
+  font-weight: $fontW7;
+  font-size: 14px;
+  line-height: 1.28;
+  color: $title_color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $bg_button_hover;
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
