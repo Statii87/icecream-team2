@@ -1,3 +1,11 @@
 $fontDM: "DM Sans", sans-serif;
 $fontW5: 500;
 $fontW7: 700;
+
+
+/* For products section */
+@mixin setWidth($nrItems) {
+    $nrGap: $nrItems - 1;
+    $totalGap: $nrGap * 30;
+    flex-basis: calc((100% - #{$totalGap}px) / #{$nrItems});
+  }
