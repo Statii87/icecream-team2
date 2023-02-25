@@ -1,0 +1,23 @@
+.header-section {
+  max-height: 100%;
+  background-image: linear-gradient(-45deg, #ffb8ca, #aa1f40, #f6a7bb, #af6678);
+  background-size: 400% 400%;
+  animation: gradient-transition 15s ease infinite;
+}
+@keyframes gradient-transition {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.elipse {
+  background-image: url(../../../src/images/header/02ellipse@2x.png);
+  background-repeat: no-repeat;
+  background-size: 540px 540px;
+  background-position: bottom 82px right 366px;
+}

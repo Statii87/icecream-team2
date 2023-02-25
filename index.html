@@ -23,7 +23,167 @@
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
   <body>
-    <header></header>
+    <!--Header Section-->
+    <header class="header-section" id="header">
+      <div class="elipse">
+        <!--Top Section-->
+        <div class="header-top">
+          <div class="logo">
+            <img
+              srcset="
+                src/images/header/logo-icecream@1x.png 1x,
+                src/images/header/logo-icecream@2x.png 2x
+              "
+              src="src/images/header/logo-icecream@1x.png"
+              alt=""
+            />
+          </div>
+          <!--Nav Section-->
+          <nav class="nav">
+            <!--Mobile Menu Button-->
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <!--End Mobile Menu Button-->
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#header">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">About us</a>
+              </li>
+              <li class="nav__item"><a href="#">How it's made?</a></li>
+              <li class="nav__item"><a href="#products">Our products</a></li>
+              <li class="nav__item"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <button type="button" class="button-buy">Buy now</button>
+        </div>
+        <!--End Top Section-->
+        <!--Hero Section-->
+        <section class="hero">
+          <div class="hero__left">
+            <div class="hero__left-top">
+              <h1 class="hero-title">
+                ice cream <br />
+                made with <br />
+                <span class="hero-title-passion"> passion</span>
+              </h1>
+              <button type="button" class="button button--products">
+                Products
+              </button>
+              <button type="button" class="button button--about">
+                How it's made?
+              </button>
+            </div>
+            <div class="eco-milk">
+              <img
+                srcset="
+                  src/images/header/milk@1x.png 1x,
+                  src/images/header/milk@2x.png 2x
+                "
+                src="src/images/header/milk@2x.png"
+                alt=""
+              />
+              <div class="eco-milk__box">
+                <p class="eco-milk__pres">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et
+                </p>
+                <img
+                  srcset="
+                    src/images/header/arrow-right@1x.png 1x,
+                    src/images/header/arrow-right@2x.png 2x
+                  "
+                  src="src/images/header/arrow-right@2x.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hero__center">
+            <img
+              srcset="
+                src/images/header/01icecream@1x.png 1x,
+                src/images/header/01icecream@2x.png 2x
+              "
+              src="src/images/header/01icecream@2x.png"
+              alt=""
+            />
+          </div>
+          <div class="hero__right">
+            <ul class="statis">
+              <li class="statis__item">
+                <div class="statis-elips">
+                  <div class="statis__item-nr">16</div>
+                  <!-- <sub><img src="src/images/header/01ellipse@1x.png" /></sub>
+                <br />-->
+                  <span class="statis__span">cafes</span>
+                </div>
+              </li>
+              <li class="statis__item">
+                <div class="statis-elips">
+                  <div class="statis__item-nr">23</div>
+                  <!--<sub><img src="src/images/header/01ellipse@1x.png" /></sub>
+                <br />-->
+                  <span class="statis__span">food trucks</span>
+                </div>
+              </li>
+            </ul>
+            <img
+              srcset="
+                src/images/header/tasty@1x.png 1x,
+                src/images/header/tasty@2x.png 2x
+              "
+              src="src/images/header/tasty@2x.png"
+              alt=""
+            />
+          </div>
+        </section>
+      </div>
+    </header>
+    <!--End Header-->
+    <!--Mobile Menu-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a class="link" href="#">Home</a></li>
+        <li><a class="link" href="#">About us</a></li>
+        <li><a class="link" href="#">How it's made?</a></li>
+        <li><a class="link" href="#">Our products</a></li>
+        <li><a class="link" href="#">Contact</a></li>
+      </ul>
+    </div>
+    <!--End Mobile Menu-->
     <main>
       <section class="products-section" id="products">
         <!-- Section 2 products -->
