@@ -1,0 +1,120 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+
+  &__left {
+    width: 31%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &__center {
+    width: 22%;
+    /*background-color: cornflowerblue;*/
+
+    img {
+      margin-left: auto;
+
+      display: block;
+    }
+  }
+  &__right {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
+}
+
+.hero-title {
+  min-width: 277px;
+  font-family: "Titan One";
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 116%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.hero-title-passion {
+  color: #d41443;
+  font-size: 58px;
+  line-height: 91%;
+}
+.eco-milk {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 40px;
+  &__box {
+    margin-bottom: 10px;
+  }
+  &__pres {
+    max-width: 200px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+}
+button {
+  padding: 0;
+  border-width: 0;
+}
+.button {
+  height: 40px;
+  &--products {
+    width: 107px;
+    background: #d41443;
+    border-radius: 20px;
+    color: #ffffff;
+  }
+  &--about {
+    width: 138px;
+    left: 135px;
+    top: 308px;
+    background: #ffffff;
+    border-radius: 20px;
+    margin-left: 12px;
+  }
+}
+
+.statis {
+  margin-top: 10%;
+  margin-right: 1%;
+  /* position: relative;*/
+
+  &__item-nr {
+    /* display: flex;
+    flex-direction: column;*/
+    /* margin-top: 15px;
+    margin-bottom: 5px;*/
+    font-family: "Titan One";
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 115%;
+    text-align: left;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #d41443;
+  }
+  &__span {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: #ffffff;
+  }
+}
+.statis__item {
+  padding-top: 5px;
+  background-image: url(../../../src/images/header/01ellipse@1x.png);
+  background-repeat: no-repeat;
+  background-position: right 1px top 7px;
+  background-size: 28px 28px;
+}

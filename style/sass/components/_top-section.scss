@@ -1,0 +1,35 @@
+.header-top {
+  display: flex;
+  margin: 0 1%;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 37px;
+  padding-bottom: 37px;
+}
+.nav__list {
+  display: flex;
+  width: 541px;
+  justify-content: space-around;
+}
+.nav__item {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 131%;
+  /*display: flex;
+  align-items: center;*/
+  color: #ffffff;
+}
+.button-buy {
+  width: 159px;
+  height: 44px;
+  left: 1025px;
+  top: 40px;
+  background: #ffffff;
+  border-radius: 22px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
