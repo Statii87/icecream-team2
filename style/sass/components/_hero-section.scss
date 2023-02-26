@@ -4,22 +4,20 @@
   height: fit-content;
 
   &__left {
-    width: 31%;
+    width: 32%;
     margin-top: auto;
     margin-bottom: auto;
   }
   &__center {
-    width: 22%;
-    /*background-color: cornflowerblue;*/
+    width: 23%;
 
     img {
       margin-left: auto;
-
       display: block;
     }
   }
   &__right {
-    width: 27%;
+    width: 28%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,10 +43,9 @@
 }
 .eco-milk {
   display: flex;
-  align-items: flex-end;
-  margin-top: 40px;
+
   &__box {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
   &__pres {
     max-width: 200px;
@@ -64,6 +61,10 @@ button {
   padding: 0;
   border-width: 0;
 }
+.buttons {
+  display: flex;
+  justify-content: center;
+}
 .button {
   height: 40px;
   &--products {
@@ -77,6 +78,7 @@ button {
     left: 135px;
     top: 308px;
     background: #ffffff;
+    color: #d41443;
     border-radius: 20px;
     margin-left: 12px;
   }
@@ -117,4 +119,127 @@ button {
   background-repeat: no-repeat;
   background-position: right 1px top 7px;
   background-size: 28px 28px;
+}
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .hero {
+    justify-content: space-around;
+    position: relative;
+  }
+  .eco-milk {
+    display: none;
+  }
+  .hero__right {
+    display: none;
+  }
+  .hero__left-top {
+    position: absolute;
+    margin-left: 6%;
+    top: 30%;
+  }
+  .hero__center {
+    width: 70%;
+
+    img {
+      margin-right: auto;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    /*justify-content: space-around;*/
+    &__left {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin-top: 0;
+      margin-bottom: 0;
+      justify-content: space-around;
+    }
+    &__center {
+      width: 25%;
+      display: flex;
+      margin-top: auto;
+      img {
+        width: 100%;
+      }
+    }
+    &__right {
+      width: 35%;
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+  .hero-title {
+    font-size: 35px;
+    line-height: 114%;
+    min-width: 162px;
+    text-align: center;
+    margin-top: 35px;
+  }
+  .hero-title-passion {
+    font-size: 55px;
+    line-height: 114%;
+  }
+  .eco-milk {
+    margin-bottom: 50px;
+    margin-top: 40%;
+    &__box {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    &__pres {
+      font-size: 12px;
+      line-height: 150%;
+      max-width: 150px;
+    }
+    .bio-milk {
+      min-width: 50%;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    &__right {
+      img {
+        min-width: 342px;
+      }
+    }
+  }
+  .hero-title {
+    font-size: 48px;
+    line-height: 116%;
+    font-family: "Titan One";
+  }
+  .hero-title-passion {
+    font-size: 68px;
+    line-height: 91%;
+  }
+  .eco-milk {
+    &__box {
+      /*margin-bottom: 40%;*/
+      margin-top: 10%;
+      width: 60%;
+    }
+    &__pres {
+      font-size: 14px;
+      line-height: 140%;
+      /* width: 40%;*/
+      max-width: 200px;
+    }
+    .bio-milk {
+      width: 60%;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
