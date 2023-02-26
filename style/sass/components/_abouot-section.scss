@@ -269,6 +269,25 @@
 }
   .cow-img{
     width: 501px;
+    &:hover {
+      animation-name: spin;
+      animation-duration: 5s;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-iteration-count: 1;
+          
+        @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+      
+            25% {
+              transform: rotate(-40deg);
+            }
+            50% {
+              transform: rotate(40deg);
+            }          
+        }
+      }
   }
   
   .grid-about__item{
