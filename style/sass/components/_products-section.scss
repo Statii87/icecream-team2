@@ -12,7 +12,10 @@
       justify-content: center;
       background-color:  #fff;
     }
-  }
+}
+
+// Title and paragraf
+
   .products__subtitle {
     font-weight: bold;
     font-size: 18px;
@@ -30,10 +33,45 @@
     font-size: 34px;
     line-height: 1.14;
     text-align: center;
+    letter-spacing: 0.04;
     text-transform: uppercase;
-    color: #D41443;
-    ;
+    color: #D41443; 
+}
+
+.animated {
+    opacity: 1;
+    animation: animate 5s ease-out forwards infinite;
+    animation-delay: 1s;
+}
+@keyframes animate {
+    0% {
+        letter-spacing: -15px;
+    }
+
+    20% {
+        letter-spacing: 10px;
+    }
+
+    100% {
+        letter-spacing: 2px;
+    }
+}   
+
+.animatedy {
+    animation: rotateY 2500ms infinite alternate ease-in-out 1000ms;
+} 
+@keyframes rotateY {
+    0% {
+      transform: rotateY(0deg);
+    }
+  
+    100% {
+      transform: rotateY(150deg);
+    }
   }
+
+// List of ptoducts  
+
   .product {
     display: flex;
     flex-direction: column;
@@ -123,7 +161,6 @@
     height: 15px;
     width: 30px;
     fill: #D41443;
-    margin-left: auto;
   }
   
   .product__item:first-child:before {
@@ -207,35 +244,65 @@
     transition-property: opacity, box-shadow;
   }
 
-/*.product__name :hover {
-    z-index: 60;
-    font-size: 22px;
-    cursor: pointer;
-    @media screen and (min-width: 1200px) {
-      font-size: 33px;
+//For laptob
+
+@media (min-width: 1200px) {
+    .products-section {
+        padding: 60px 16px;
+    }
+    .product {
+        .product {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 20px;
+            &__item {
+              @include setWidth(3);
+              height: 100%;
+            }
+        }
+        .product__item:first-child:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -150px;
+            transform: translateX(-50%);
+            z-index: 60;
+            width: 289px;
+            height: 292px;
+            background-image: url(../src/images/products/icecream1200.png);
+            background-size: 289px 292px;
+            background-color: transparent;
+          }
+          .product__item:nth-child(2):before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -150px;
+            transform: translateX(-50%);
+            z-index: 60;
+            width: 289px;
+            height: 292px;
+            background-image: url(../src/images/products/icecoffe1200.png);
+            background-size: 289px 292px;
+          }
+          .product__item:nth-child(3):before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -146px;
+            transform: translateX(-50%);
+            z-index: 60;
+            width: 289px;
+            height: 292px;
+            background-image: url(../src/images/products/milkshake1200.png);
+            background-size: 289px 292px;
     }
   }
-   .marker :hover {
-    z-index: 60;
-  }
+}
 
-.product__name {
-  margin-top: auto;
-  font-family: white;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $button-white-color;
-  @media screen and (min-width: 1200px) {
-    font-size: 30px;
-  }
-  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition-property: z-index, font-size;
-}*/
+
 
 
 
