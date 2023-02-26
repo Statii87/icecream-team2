@@ -126,7 +126,18 @@
       letter-spacing: 0.04em;
       color: $title_color;
       margin-bottom: 13px;
-      animation: 5s anim-flipX ease infinite;
+      animation: waviy 3s infinite;
+      @keyframes waviy {
+        0%,40%,100% {
+          transform: translateY(0)
+        }
+        0% {
+          transform: rotate(10deg);
+        }
+        50% {
+              transform: rotate(-510deg);
+            }
+      }
     }
 
     &--text{
@@ -244,7 +255,7 @@
     max-width: 540px;
     padding-bottom: 60px;
     font-size: 58px;
-    animation: 3s anim-lineUp ease-in infinite;
+    animation: 3s anim-flipX ease infinite;
   }
   .title__container--subtitle{
     font-size: 30px;
