@@ -5,36 +5,222 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ice Cream</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="icon shortcut" type="image/x-png" href="src/image/favicon.png" />
+    <link
+      rel="icon shortcut"
+      type="image/x-png"
+      href="src/images/favicon.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Raleway:wght@700&family=Titan+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header></header>
+    <!--Header Section-->
+    <header class="header-section" id="header">
+      <div class="elipse">
+        <!--Top Section-->
+        <div class="header-top">
+          <div class="logo">
+            <img
+              srcset="
+                src/images/header/logo-icecream@1x.png 1x,
+                src/images/header/logo-icecream@2x.png 2x
+              "
+              src="src/images/header/logo-icecream@1x.png"
+              alt=""
+            />
+          </div>
+          <!--Nav Section-->
+          <nav class="nav">
+            <!--Mobile Menu Button-->
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <!--End Mobile Menu Button-->
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#header">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#about-us">About us</a>
+              </li>
+              <li class="nav__item"><a href="#how-made">How it's made?</a></li>
+              <li class="nav__item"><a href="#products">Our products</a></li>
+              <li class="nav__item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <button type="button" class="button-buy">
+            Buy now
+            <svg class="btn-icon">
+              <use href="./src/image/symbol-defs.svg#icon-Vector-2"></use>
+            </svg>
+          </button>
+        </div>
+
+        <!--End Top Section-->
+        <!--Hero Section-->
+        <section class="hero">
+          <div class="hero__left">
+            <div class="hero__left-top">
+              <h1 class="hero-title">
+                ice cream <br />
+                made with <br />
+                <span class="hero-title-passion"> passion</span>
+              </h1>
+              <div class="buttons">
+                <button type="button" class="button button--products">
+                  Products
+                </button>
+                <button type="button" class="button button--about">
+                  How it's made?
+                </button>
+              </div>
+            </div>
+            <div class="eco-milk">
+              <img
+                class="bio-milk"
+                srcset="
+                  src/images/header/milk@1x.png 1x,
+                  src/images/header/milk@2x.png 2x
+                "
+                src="src/images/header/milk@2x.png"
+                alt=""
+              />
+              <div class="eco-milk__box">
+                <p class="eco-milk__pres">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et
+                </p>
+                <img
+                  srcset="
+                    src/images/header/arrow-right@1x.png 1x,
+                    src/images/header/arrow-right@2x.png 2x
+                  "
+                  src="src/images/header/arrow-right@2x.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hero__center">
+            <img
+              srcset="
+                src/images/header/01icecream@1x.png 1x,
+                src/images/header/01icecream@2x.png 2x
+              "
+              src="src/images/header/01icecream@2x.png"
+              alt=""
+            />
+          </div>
+          <div class="hero__right">
+            <ul class="statis">
+              <li class="statis__item">
+                <div class="statis-elips">
+                  <div class="statis__item-nr">16</div>
+                  <span class="statis__span">cafes</span>
+                </div>
+              </li>
+              <li class="statis__item">
+                <div class="statis-elips">
+                  <div class="statis__item-nr">23</div>
+                  <span class="statis__span">food trucks</span>
+                </div>
+              </li>
+            </ul>
+            <img
+              class="tasty"
+              srcset="
+                src/images/header/tasty@1x.png 1x,
+                src/images/header/tasty@2x.png 2x
+              "
+              src="src/images/header/tasty@1x.png"
+              alt=""
+            />
+          </div>
+        </section>
+      </div>
+    </header>
+    <!--End Header-->
+    <!--Mobile Menu-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <button type="button" class="button-buy-mobile">
+        Buy now
+        <svg class="btn-icon">
+          <use href="./src/image/symbol-defs.svg#icon-Vector-2"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li class="mobile-item"><a class="link" href="#header">Home</a></li>
+        <li class="mobile-item">
+          <a class="link" href="#about-us">About us</a>
+        </li>
+        <li class="mobile-item">
+          <a class="link" href="#how-made">How it's made?</a>
+        </li>
+        <li class="mobile-item">
+          <a class="link" href="#products">Our products</a>
+        </li>
+        <li class="mobile-item"><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <!--End Mobile Menu-->
     <main>
       <section class="products-section" id="products">
         <!-- Section 2 products -->
         <div class="products__container">
-          <p class="products__subtitle">100% natural</p>
-          <h2 class="products__title">PRODUCTS</h2>
+          <p class="products__subtitle animatedy">100% natural</p>
+          <h2 class="products__title animated">PRODUCTS</h2>
           <ul class="product">
             <li class="product__item">
               <h3 class="product__name">ice cream</h3>
               <div class="marker"></div>
               <p class="product__description">
-                Lorem ipsum dolor sit amet,<br />
-                consectetur adipiscing elit,<br />
-                sed do eiusmod tempor <br />
-                incididunt ut labore et
+                You have finished work, you feel bored,<br />the sun is in the
+                sky, it's hot outside,<br />come to us for an ice cream
               </p>
               <button class="product__button">
                 <svg class="product__icon">
@@ -43,15 +229,14 @@
                   ></use>
                 </svg>
               </button>
+              <div class="product__overlay"></div>
             </li>
             <li class="product__item">
               <h3 class="product__name">ice coffee</h3>
               <div class="marker"></div>
               <p class="product__description">
-                Lorem ipsum dolor sit amet,<br />
-                consectetur adipiscing elit,<br />
-                sed do eiusmod tempor <br />
-                incididunt ut labore et
+                Tired, after a night of coding,come and taste our new coffee,<br />which
+                will give you energy for all day
               </p>
               <button class="product__button">
                 <svg class="product__icon">
@@ -60,15 +245,14 @@
                   ></use>
                 </svg>
               </button>
+              <div class="product__overlay"></div>
             </li>
             <li class="product__item">
               <h3 class="product__name">milkshakes</h3>
               <div class="marker"></div>
               <p class="product__description">
-                Lorem ipsum sit amet,<br />
-                consectetur adipiscing elit,<br />
-                sed do eiusmod tempor<br />
-                incididunt ut labore et
+                Sweet, fresh and refreshing,<br />it looks so good that you
+                can't refuse.<br />take your share of happiness
               </p>
               <button class="product__button">
                 <svg class="product__icon">
@@ -77,391 +261,276 @@
                   ></use>
                 </svg>
               </button>
+              <div class="product__overlay"></div>
             </li>
           </ul>
         </div>
       </section>
       <!-- End section 2 -->
       <!-- Section 3 -->
-      <section class="about-section">
+      <section class="about-section" id="about-us">
         <div class="title__container">
           <h2 class="title__container--subtitle">tradition and love</h2>
           <h1 class="title__container--title">how it's made?</h1>
         </div>
-        <div class="cow-container">
-          <div class="cow-container__img">
-            <img
-              src="src/images/about-section/bio-milk.png"
-              alt="bio-milk"
-              width="280"
-            />
+        <div class="cow-description">
+          <div class="cow-container">
+            <div class="cow-container__img">
+              <img
+                class="cow-img"
+                src="src/images/about-section/bio-milk.png"
+                alt="bio-milk"
+                width="280"
+              />
+            </div>
+          </div>
+          <div class="description-container">
+            <ul class="grid-about">
+              <li class="grid-about-list">
+                <p class="grid-about__item grid-about__item--first">
+                  Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam
+                  vel justo cursus, faucibus lorem eget, egestas eros. Maecenas
+                  eleifend erat at justo fringilla.
+                </p>
+              </li>
+              <li>
+                <p class="grid-about__item grid-about__item--second">
+                  Curabitur lacinia enim at ex blandit, vel pellentesque odio
+                  elementum. Mauris rhoncus orci in imperdiet placerat.
+                  Vestibulum euismod nisl suscipit ligula volutpat, a feugiat
+                  urna maximus. Cras massa nibh, tincidunt. <br /><br />
+                  Aliquam erat volutpat. Aenean accumsan.
+                </p>
+              </li>
+              <li>
+                <button type="button" class="about-button">
+                  Read more
+                  <svg class="btn-icon">
+                    <use href="./src/image/symbol-defs.svg#icon-Vector-2"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="description-container">
-          <ul class="">
-            <li>
-              <p>
-                Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel
-                justo cursus, faucibus lorem eget, egestas eros. Maecenas
-                eleifend erat at justo fringilla.
-              </p>
-            </li>
-            <li>
-              <p>
-                Curabitur lacinia enim at ex blandit, vel pellentesque odio
-                elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum
-                euismod nisl suscipit ligula volutpat, a feugiat urna maximus.
-                Cras massa nibh, tincidunt. Aliquam erat volutpat. Aenean
-                accumsan.
-              </p>
-            </li>
-            <li>
-              <button type="button">Read more</button>
-            </li>
-          </ul>
-        </div>
       </section>
-      <section class="advantages-section">
+      <section class="advantages-section" id="how-made">
         <h2 class="hidden">Advantages</h2>
-        <ul>
-          <li>
-            <h3>721</h3>
-            <p>Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+        <ul class="grid__advantage">
+          <li class="grid__advantage__list grid__advantage__list--first">
+            <h3 class="grid__advantage__list--subtitle">721</h3>
+            <p class="grid__advantage__list--text">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
           </li>
-          <li>
-            <h3>16kg</h3>
-            <p>Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+          <li class="grid__advantage__list grid__advantage__list--second">
+            <h3 class="grid__advantage__list--subtitle">16kg</h3>
+            <p class="grid__advantage__list--text">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
           </li>
-          <li>
-            <h3>84</h3>
-            <p>Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+          <li class="grid__advantage__list grid__advantage__list--third">
+            <h3 class="grid__advantage__list--subtitle">84</h3>
+            <p class="grid__advantage__list--text">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
           </li>
         </ul>
       </section>
       <!-- End section 3 -->
-      <section class="section gallery">
-        <div class="container">
-          <h2 class="section__title visually-hidden">Gallery</h2>
-          <div class="gallery__grid">
-            <div class="gallery__item gallery__item-1">
-              <picture>
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-1_1200.jpg 1x,
-                    images/gallery/gallery-img-1_1200@2x.jpg  2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-1_768.jpg 1x,
-                    images/gallery/gallery-img-1_768@2x      2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-1_320.jpg 1x,
-                    images/gallery/gallery-img-1_320.jpg     2x
-                  "
-                  media="(min-width:320px)"
-                />
+      <section class="section-gallery">
+        <div class="gallery__container">
+          <ul class="gallery__list">
+            <li class="gallery__list-item">
+              <ul class="gallery__list-itemlist">
+                <li>
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-1_320x2.jpg"
+                    srcset="
+                      ./src/images/gallery/gallery-img-1_320.jpg    1x,
+                      ./src/images/gallery/gallery-img-1_320@x2.jpg 2x
+                    "
+                    alt="image1"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li class="gallery__list-item">
+              <ul class="gallery__list-itemlist">
+                <li>
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-2_320@2x.png"
+                    alt="imaga3"
+                  />
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-8_320@2x.png"
+                    alt="image4"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li class="gallery__list-item">
+              <ul class="gallery__list-itemlist">
+                <li>
+                  <img
+                    class="larger-image"
+                    src="./src/images/gallery/gallery-img-3_320@2x.jpg"
+                    alt="image5"
+                  />
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-10_320@2x.png"
+                    alt="image6"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li class="gallery__list-item">
+              <ul class="gallery__list-itemlist">
+                <li>
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-4_320@2x.png"
+                    alt="image7"
+                  />
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-5_320@2x.png"
+                    alt="image8"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li class="gallery__list-item">
+              <ul class="gallery__list-itemlist">
+                <li>
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-7_320@2x.png"
+                    alt="image9"
+                  />
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-9_320@2x.png"
+                    alt="image9"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li class="gallery__list-item">
+              <ul class="gallery__list-itemlist">
+                <li>
+                  <img
+                    class="img-res"
+                    src="./src/images/gallery/gallery-img-2_320@2x.png"
+                    alt="image10"
+                  />
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- customers review -->
+        <div class="customer-review">
+          <div class="review-container swiper mySwiper">
+            <ul class="reviews-customer swiper-wrapper">
+              <li class="reviews-customer-items swiper-slide">
                 <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-1_1200.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-2">
-              <picture>
-                <source
+                  class="customer-review__avatar_img"
                   srcset="
-                    src/images/gallery/gallery-img-2_1200.jpg 1x,
-                    images/gallery/gallery-img-2_1200@2x.jpg  2x
+                    ./src/customers-img/customer1.png   1x,
+                    ./src/customers-img/customer1-1.png 2x
                   "
-                  media="(min-width:1200px)"
+                  src="./src/customers-img/customer1.png"
+                  alt="customer photo"
                 />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-2_768.jpg 1x,
-                    images/gallery/gallery-img-2_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-2_320.jpg 1x,
-                    images/gallery/gallery-img-2_320@2x.jpg  2x
-                  "
-                  media="(min-width:320px)"
-                />
+                <div class="customer-review-d">
+                  <p class="customer-review__description">
+                    Foarte buna inghetata 🤩 raport foarte bun calitate/preț e
+                    printre putinele locuri care au rămas la fel (calitativ) ca
+                    acum 18-20 de ani
+                  </p>
+                </div>
+
+                <svg class="dotGroup">
+                  <use href="./src/image/groupDots.svg#icon-Group-8"></use>
+                </svg>
+                <p class="customer-review__review__personaInfo">
+                  Cristina Cris, Cluj Napoca
+                </p>
+              </li>
+              <li class="reviews-customer-items swiper-slide">
                 <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-2_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-3">
-              <picture>
-                <source
+                  class="customer-review__avatar_img"
                   srcset="
-                    src/images/gallery/gallery-img-3_1200.jpg 1x,
-                    images/gallery/gallery-img-3_1200@2x.jpg  2x
+                    ./src/customers-img/customer2.png   1x,
+                    ./src/customers-img/customer2-1.png 2x
                   "
-                  media="(min-width:1200px)"
+                  src=" ./src/customers-img/customer2.png "
+                  alt="customer photo"
                 />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-3_768.jpg 1x,
-                    images/gallery/gallery-img-3_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-3_320.jpg 1x,
-                    images/gallery/gallery-img-3_320@2x.jpg  2x
-                  "
-                  media="(min-width:320px)"
-                />
+                <div class="customer-review-d">
+                  <p class="customer-review__description">
+                    Recomand clătitele siciliene. Gustul înghețatei ar putea fi
+                    îmbunătățit folosind tehnologii mai moderne și rețete
+                    actualizate. Există exemple de gelaterii în oraș care au
+                    înțeles acest lucru.
+                  </p>
+                </div>
+
+                <svg class="dotGroup">
+                  <use href="./src/image/groupDots.svg#icon-Group-8"></use>
+                </svg>
+                <p class="customer-review__review__personaInfo">
+                  Adriana Marian, Constanta
+                </p>
+              </li>
+              <li class="reviews-customer-items swiper-slide">
                 <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-3_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-4">
-              <picture>
-                <source
+                  class="customer-review__avatar_img"
                   srcset="
-                    src/images/gallery/gallery-img-4_1200.jpg 1x,
-                    images/gallery/gallery-img-4_1200@2x.jpg  2x
+                    ./src/customers-img/customer3.png   1x,
+                    ./src/customers-img/customer3-1.png 2x
                   "
-                  media="(min-width:1200px)"
+                  src="./src/customers-img/customer3.png "
+                  alt="customer photo"
                 />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-4_768.jpg 1x,
-                    images/gallery/gallery-img-4_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-4_320.jpg1x,
-                    images/gallery/gallery-img-4_320@2x.jpg    2x
-                  "
-                  media="(min-width:320px)"
-                />
-                <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-4_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-5">
-              <picture>
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-5_1200.jpg 1x,
-                    images/gallery/gallery-img-5_1200@2x.jpg  2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-5_768.jpg 1x,
-                    images/gallery/gallery-img-5_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-5_320.jpg 1x,
-                    images/gallery/gallery-img-5_320@2x.jpg  2x
-                  "
-                  media="(min-width:320px)"
-                />
-                <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-5_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-6">
-              <picture>
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-10_1200.jpg 1x,
-                    images/gallery/gallery-img-10_1200@2x.jpg  2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-6_768.jpg 1x,
-                    images/gallery/gallery-img-6_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-6_320.jpg 1x,
-                    images/gallery/gallery-img-6_320@2x.jpg  2x
-                  "
-                  media="(min-width:320px)"
-                />
-                <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-6_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-7">
-              <picture>
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-7_1200.jpg 1x,
-                    images/gallery/gallery-img-7_1200@2x.jpg  2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-7_768.jpg 1x,
-                    images/gallery/gallery-img-7_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-7_320.jpg 1x,
-                    images/gallery/gallery-img-7_320@2x.jpg  2x
-                  "
-                  media="(min-width:320px)"
-                />
-                <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-7_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-8">
-              <picture>
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-10_1200.jpg 1x,
-                    images/gallery/gallery-img-10_1200@2x.jpg  2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-8_768.jpg 1x,
-                    images/gallery/gallery-img-8_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-8_320.jpg 1x,
-                    images/gallery/gallery-img-8_320@2x.jpg  2x
-                  "
-                  media="(min-width:320px)"
-                />
-                <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-8_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-9">
-              <picture>
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-9_1200.jpg 1x,
-                    images/gallery/gallery-img-9_1200@2x.jpg  2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-9_768.jpg 1x,
-                    images/gallery/gallery-img-9_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-9_320.jpg 1x,
-                    images/gallery/gallery-img-9_320@2x.jpg  2x
-                  "
-                  media="(min-width:320px)"
-                />
-                <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-9_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
-            </div>
-            <div class="gallery__item gallery__item-10">
-              <picture>
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-10_1200.jpg 1x,
-                    images/gallery/gallery-img-10_1200@2x.jpg  2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-10_768.jpg 1x,
-                    images/gallery/gallery-img-10_768@2x.jpg  2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    src/images/gallery/gallery-img-10_320.jpg 1x,
-                    images/gallery/gallery-img-10_320@2x.jpg  2x
-                  "
-                  media="(min-width:320px)"
-                />
-                <img
-                  class="gallery__image"
-                  src="src/images/gallery/gallery-img-10_1200@2x.jpg"
-                  data-content="gallery"
-                  alt="icecream"
-                />
-              </picture>
+                <div class="customer-review-d">
+                  <p class="customer-review__description">
+                    Locația este foarte curată, iar ospătarii au fost foarte
+                    atenți la detaliile comenzii clienților. Preturile sunt
+                    accesibile iar înghețata e mai mult decât delicioasa!
+                  </p>
+                </div>
+                <svg class="dotGroup">
+                  <use href="./src/image/groupDots.svg#icon-Group-8"></use>
+                </svg>
+                <p class="customer-review__review__personaInfo">
+                  Andreea is traveling, HD
+                </p>
+              </li>
+            </ul>
+            <div class="swipe-btn">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <!-- <div class="swiper-pagination"></div> -->
             </div>
           </div>
         </div>
+
+        <!-- end customers review -->
       </section>
-      <!-- section 5 -->
-      <section class="contact-section">
+      <!--------------------SECTION 5 START  ------------------------------------------------------->
+
+      <section class="contact-section" id="contact">
         <div class="container">
           <h2 class="section__title" hidden>
             acesta este un titlu ascuns, daca l-ai vazut, inseamna ca esti mai
-            bun programator ca mine:)
+            bun programator ca mine_:)
           </h2>
           <ul class="section-contact">
             <li class="section-contact__item first-card">
@@ -553,7 +622,7 @@
 
           <ul class="button-list">
             <li class="button-list__item">
-              <button class="button-list__btn firts-btn data-modal-open-l">
+              <button class="button-list__btn firts-btn open-button_1">
                 Our Locations
                 <svg class="btn-icon">
                   <use href="./src/image/symbol-defs.svg#icon-Vector-1"></use>
@@ -562,7 +631,11 @@
             </li>
 
             <li class="button-list__item">
-              <button class="button-list__btn second-btn data-modal-open-f">
+              <button
+                class="button-list__btn second-btn"
+                type="button"
+                data-modal-open
+              >
                 Franchise
                 <svg class="btn-icon">
                   <use href="./src/image/symbol-defs.svg#icon-Vector-2"></use>
@@ -570,49 +643,128 @@
               </button>
             </li>
           </ul>
+
+          <!--------popup  modal 1 -->
+          <dialog class="modal_1">
+            <button type="button" class="close-button">
+              <svg
+                class="modal_1__close-btn"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 4.10786L13.8921 3L9.5 7.39214L5.10786 3L4 4.10786L8.39214 8.5L4 12.8921L5.10786 14L9.5 9.60786L13.8921 14L15 12.8921L10.6079 8.5L15 4.10786Z"
+                />
+              </svg>
+            </button>
+            <h3 class="modal_1__title">We will be glad to see you</h3>
+            <iframe
+              class="modal_1__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d355111.2513208778!2d21.268241482002622!3d45.94515586816834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d9efab7655d%3A0x7d0a4cd76de681f!2sZanoni!5e0!3m2!1sro!2sro!4v1677168931972!5m2!1sro!2sro"
+              style="border: 3px solid pink"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p class="modal_1__str">
+              Strada Ciprian Porumbescu 29, Timișoara 300425
+            </p>
+            <a
+              href="https://goo.gl/maps/8ztkL6uQNfBRvNRc8"
+              class="btn modal_map_btn"
+            >
+              Open in Google maps
+            </a>
+          </dialog>
+
+          <!-- popup  modal 2-->
+          <dialog class="modal-2">
+            <button class="close-modal">
+              <svg
+                class="close-btn"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 4.10786L13.8921 3L9.5 7.39214L5.10786 3L4 4.10786L8.39214 8.5L4 12.8921L5.10786 14L9.5 9.60786L13.8921 14L15 12.8921L10.6079 8.5L15 4.10786Z"
+                />
+              </svg>
+            </button>
+            <div class="inner_form">
+              <h3 class="inner_form__title">
+                Leave your details and we will call you back
+              </h3>
+              <form class="info_box" autocomplete="off">
+                <label class="row">
+                  Name
+                  <input type="text" name="name" autocomplete="off" />
+                </label>
+                <label class="row">
+                  Telephone
+                  <input type="tel" name="phone" autocomplete="off" />
+                </label>
+                <label class="row"
+                  >E-mail
+                  <input type="email" name="email" autocomplete="off" />
+                </label>
+                <label class="row"
+                  >Comments
+                  <textarea
+                    name="comments"
+                    placeholder="Enter the text"
+                  ></textarea>
+                </label>
+                <button class="button" type="submit">Send</button>
+              </form>
+            </div>
+          </dialog>
+          <!-- end popup  modal  -->
         </div>
       </section>
-      <!-- end section 5 -->
+      <!---------------------------------  SECTION 5 END -------------------------------------->
     </main>
     <!-- sectiunea 6 -->
-    <footer class="footer__section"> 
+    <footer class="footer"> 
     <div class="container footer__container">
-     <div class="footer__text-box"> 
-        <div class="footer__title footer__title--one"> 
-            <span class="footer__title--ice-cream">homemade ice cream</span> 
-            <span class="footer__title--made">made</span> 
+     <div class="footer__text"> 
+        <div class="footer__title-desktop"> 
+          <h2 class="footer__title-ice-cream footer__title-firts">homemade ice cream </h2>
+            <span class="footer__title-made footer__title-firts">made</span> 
         </div> 
-        <div class="footer__title--word">
-            <p>with passion</p>
+        <div class="footer__title-with-passion footer__title-desktop">
+           <span class="footer__title-latter footer__title-second footer__space">with</span>
+           <span class="footer__title-latter footer__title-second">passion</span>
         </div>
      </div>
-        <div class="contacts-box">
-            <div class="social-box unstyled-list">
-                <ul class="footer-social-box__links"> 
-                    <li class="footer-social-box__list"><a href="https://github.com/" target="_blank" class="footer-social-box__link">
-                        <svg class="footer-social-box__icon" width="32px" height="32px"> 
-                        <use href="./src/images/svg-footer/symbol-defs.svg#icon-github"></use>
+        <div class="social-box__container">
+            <div class="social-box">
+                <ul class="social-box__links"> 
+                    <li class="social-box__list"><a href="https://github.com/" target="_blank" class="social-box__link">
+                        <svg class="social-box__icon" width="32px" height="32px"> 
+                        <use href="src/images/svg-footer/symbol-defs.svg#icon-github"></use>
                         </svg></a> 
                     </li>
-                    <li class="footer-social-box__list"><a href="https://telegram.org/" target="_blank" class="footer-social-box__link"> 
-                        <svg class="footer-social-box__icon" width="32px" height="32px"> 
-                        <use href="./src/images/svg-footer/symbol-defs.svg#icon-telegram"></use> 
+                    <li class="social-box__list"><a href="https://telegram.org/" target="_blank" class="social-box__link"> 
+                        <svg class="social-box__icon" width="32px" height="32px"> 
+                        <use href="src/images/svg-footer/symbol-defs.svg#icon-telegram"></use> 
                         </svg></a> 
                     </li> 
-                    <li class="footer-social-box__list"><a href="https://www.facebook.com/" target="_blank" class="footer-social-box__link"> 
-                        <svg class="footer-social-box__icon" width="32px" height="32px"> 
-                        <use href="./src/images/svg-footer/symbol-defs.svg#icon-Group"></use>
+                    <li class="social-box__list"><a href="https://www.facebook.com/" target="_blank" class="social-box__link"> 
+                        <svg class="social-box__icon" width="32px" height="32px"> 
+                        <use href="src/images/svg-footer/symbol-defs.svg#icon-Group"></use>
                         </svg></a> 
                     </li> 
                 </ul>
-                </div>
+              </div>
             <div class="contact-box">
-                <span class="footer-contact-box__text">Feel free to contact</span><a href="tel:+610383766284" class="footer-contact-box__phone">+61 (0) 383 766 284</a> 
+                <span class="contact-box__text">Feel free to contact</span><a href="tel:+610383766284" class="contact-box__phone">+61 (0) 383 766 284</a> 
             </div>
             </div>    
         </div>
-            <div class="footer-paragraf-box"> 
-                <p class="footer-paragraf-box__text">© 2021 - IceCream. All Rights Reserved.</p> 
+            <div class="copyright-box"> 
+                <p class="copyright-box__text">© 2021 - IceCream. All Rights Reserved.</p> 
             </div> 
             </footer>
   </body>

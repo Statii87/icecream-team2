@@ -1,0 +1,158 @@
+.customer-review div {
+  padding-bottom: 90px;
+}
+
+.customer-review {
+  margin: auto auto;
+  padding: 0 100px;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews-customer {
+  max-width: 926px;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.reviews-customer-items {
+  text-align: center;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+.customer-review__avatar_img {
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.customer-review__avatar_img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.customer-review__description {
+  padding: -1px 60px;
+  background-color: #fafafa;
+  margin: 0 15px;
+  font-family: $fontDM;
+  font-style: normal;
+  font-weight: $fontW5;
+  font-size: 16px;
+  line-height: 30px;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #000000;
+}
+
+.customer-review__review__personaInfo {
+  font-size: 20px;
+  text-align: center;
+  margin-top: -50px;
+}
+.dotGroup {
+  width: 50px;
+  margin-top: -110px;
+}
+
+.customer-review-d {
+  max-width: 450px;
+  height: 170px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.swiper-button-next:after {
+  color: $bg_button_hover;
+  margin-left: -495px;
+  margin-top: 16px;
+}
+
+.swiper-button-prev:after {
+  color: $bg_button_hover;
+  margin-right: -495px;
+  margin-top: 16px;
+}
+
+.swiper-pagination:hover::after {
+  color: $title_color;
+}
+
+@media screen and (min-width: 480px) {
+  .review_container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customer-review {
+    max-width: 768px;
+    padding: 0 35px;
+  }
+  .review_container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+  .dotGroup {
+    width: 50px;
+    margin-top: -115px;
+  }
+  .customer-review__description {
+    padding: -2px 40px;
+    background-color: #fafafa;
+    margin: 0 15px;
+  }
+  .swiper-button-next:after {
+    margin-left: -410px;
+    margin-top: 0;
+  }
+  .swiper-button-prev:after {
+    margin-right: -410px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .customer-review__avatar {
+    margin-bottom: 28px;
+  }
+
+  .customer-review-d {
+    width: 750px;
+    height: 170px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .dotGroup {
+    width: 20px;
+    margin-top: -125px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .swiper-button-next:after {
+    margin-left: 0;
+  }
+  .swiper-button-prev:after {
+    margin-right: 0;
+  }
+}

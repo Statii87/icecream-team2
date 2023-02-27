@@ -1,11 +1,12 @@
-@import "../utils/vars";
 .about-section {
   background-color: $bg_color;
   margin: 0 auto;
+  padding-bottom: 106px;
 }
 .advantages-section {
   background-color: $bg_color;
   margin: 0 auto;
+  padding-bottom: 60px;
 }
 .title__container {
   margin: 0 auto;
@@ -43,6 +44,293 @@
 }
 .description-container {
   background-image: url("../src/images/about-section/bg-section.png");
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 90% 45%;
 }
+.grid-about {
+  list-style-type: none;
+  margin-left: 20px;
+  &__item {
+    font-family: $fontDM;
+    font-weight: $fontW5;
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 220px;
+
+    &--firts {
+      color: $black_color;
+    }
+
+    &--second {
+      color: $text_color;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+}
+.about-button {
+  width: 176px;
+  height: 44px;
+  background: $white_color;
+  border-radius: 22px;
+  border: transparent;
+  font-family: $fontDM;
+  font-weight: $fontW7;
+  font-size: 14px;
+  line-height: 1.28;
+  color: $title_color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $bg_button_hover;
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+.hidden{
+  visibility: hidden;
+  position: absolute;
+}
+@keyframes placeOut {
+  100% { transform: scale(1.2); }
+}
+@keyframes anim-flipX {
+  0% {
+    opacity: 0;
+    transform: rotateX(90def);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+}
+.grid__advantage{
+    margin-left: 20px;
+  &__list{
+    position: relative;
+    margin-bottom: 98px;
+
+    &::before{
+      animation: placeOut ease-in-out alternate .9s infinite;
+    }
+    &--subtitle{
+      font-family: 'Titan One', cursive;
+      font-size: 36px;
+      line-height: 1.14;
+      letter-spacing: 0.04em;
+      color: $title_color;
+      margin-bottom: 13px;
+      animation: waviy 3s infinite;
+      @keyframes waviy {
+        0%,40%,100% {
+          transform: translateY(0)
+        }
+        0% {
+          transform: rotate(10deg);
+        }
+        50% {
+              transform: rotate(-510deg);
+            }
+      }
+    }
+
+    &--text{
+      font-size: 12px;
+      line-height: 170%;
+      max-width: 230px;
+      color: $black_color;
+      font-family: $fontDM;
+      font-weight: $fontW7;
+    }
+  }
+}
+.grid__advantage__list--first::before{
+    content: " ";
+    position: absolute;
+    height: 50px;
+    width: 33px;
+    top: -66px;
+    left: -15px;
+    background-image: url(../src/images/about-section/ice-cream1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 20px;
+}
+.grid__advantage__list--second::before{
+    content: " ";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: -66px;
+    left: -15px;
+    background-image: url(../src/images/about-section/ice-cream2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 20px;
+}
+.grid__advantage__list--third::before{
+    content: " ";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: -66px;
+    left: -15px;
+    background-image: url(../src/images/about-section/ice-cream3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 20px;
+}
+.grid__advantage__list::before{
+  content: " ";
+  
+}
+@media screen and (min-width: 768px){
+  .about-section{
+    padding-bottom: 146px;
+  }
+  .cow-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title__container--title{
+    max-width: 450px;
+    padding-bottom: 40px;
+    font-size: 48px;
+  }
+  .title__container--subtitle{
+    font-size: 26px;
+  }
+  .description-container {
+    background-image: none;
+  }
+  .grid__advantage{
+    margin-left: 32px;
+    display: flex;
+    gap: 37px;
+    &__list{
+
+      &--subtitle{
+        font-size: 48px;
+      }
+      &--text{
+        max-width: 160px;
+        font-size: 14px;
+      }
+    }
+  }
+  .grid-about__item{
+    max-width: 334px;
+    font-size: 14px;
+  }
+  .grid-about__item--second{
+    max-width: 334px;
+    font-size: 14px;
+  }
+  .about-button{
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px){
+  .about-section{
+    padding-bottom: 146px;
+    background-image: url("../src/images/about-section/bg-section.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .cow-description{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 90px;
+  }
+  .title__container--title{
+    max-width: 540px;
+    padding-bottom: 60px;
+    font-size: 58px;
+    animation: 3s anim-flipX ease infinite;
+  }
+  .title__container--subtitle{
+    font-size: 30px;
+    animation: 3s anim-lineUp ease-out infinite;
+  }
+  @keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+  .cow-img{
+    width: 501px;
+    &:hover {
+      animation-name: spin;
+      animation-duration: 5s;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-iteration-count: 1;
+          
+        @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+      
+            25% {
+              transform: rotate(-40deg);
+            }
+            50% {
+              transform: rotate(40deg);
+            }          
+        }
+      }
+  }
+  
+  .grid-about__item{
+    max-width: 463px;
+    font-size: 16px;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  .grid-about__item--second{
+    max-width: 463px;
+    font-size: 16px;
+  }
+  .grid__advantage{
+    margin-left: 32px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 96px;
+    &__list{
+
+      &--subtitle{
+        font-size: 58px;
+
+      }
+      &--text{
+        max-width: 288px;
+        font-size: 16px;
+      }
+    }
+  }
+  .about-button{
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+ }
