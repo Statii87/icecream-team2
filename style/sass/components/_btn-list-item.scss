@@ -11,17 +11,21 @@
 
     color: #ffffff;
   }
-
   .second-btn {
-    background-color: #ecebeb;
-    border: #ebe6e6;
-    color: #d41342;
-    font-family: "DM Sans";
+    background-color: $white_color;
+    color: $title_color;
+    font-family: $fontDM;
     font-style: normal;
-    font-weight: 700;
+    font-weight: $fontW7;
     font-size: 16px;
     line-height: 21px;
     padding: 10px 19px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $bg_button_hover;
+    }
   }
 }
 
