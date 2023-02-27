@@ -1,5 +1,6 @@
 .section-gallery {
   display: flex;
+  flex-direction: column;
   position: relative;
   justify-content: center;
 }
@@ -83,7 +84,7 @@
         cursor: pointer;
       }
     }
-  }   
+  }
 }
 @media screen and (min-width: 1200px) {
   .gallery__list {
@@ -114,5 +115,3 @@
     }
   }
 }
-
-
