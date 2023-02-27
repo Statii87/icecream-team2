@@ -18,6 +18,18 @@
 .elipse {
   background-image: url(../src/images/header/02ellipse@2x.png);
   background-repeat: no-repeat;
-  background-size: 540px 540px;
-  background-position: bottom 82px right 366px;
+  background-size: 530px 530px;
+  background-position: bottom 40px right -76px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .elipse {
+    background-size: 55%;
+    background-position: bottom 40px right 198px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .elipse {
+    background-size: 45%;
+    background-position: bottom 77px right 282px;
+  }
 }

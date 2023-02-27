@@ -71,15 +71,21 @@
                 <a class="nav__link" href="#header">Home</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#about-us">About us</a>
+                <a class="nav__link" href="#">About us</a>
               </li>
-              <li class="nav__item"><a href="#">How it's made?</a></li>
+              <li class="nav__item"><a href="#about-us">How it's made?</a></li>
               <li class="nav__item"><a href="#products">Our products</a></li>
               <li class="nav__item"><a href="#contact">Contact</a></li>
             </ul>
           </nav>
-          <button type="button" class="button-buy">Buy now</button>
+          <button type="button" class="button-buy">
+            Buy now
+            <svg class="btn-icon">
+              <use href="./src/image/symbol-defs.svg#icon-Vector-2"></use>
+            </svg>
+          </button>
         </div>
+
         <!--End Top Section-->
         <!--Hero Section-->
         <section class="hero">
@@ -90,15 +96,18 @@
                 made with <br />
                 <span class="hero-title-passion"> passion</span>
               </h1>
-              <button type="button" class="button button--products">
-                Products
-              </button>
-              <button type="button" class="button button--about">
-                How it's made?
-              </button>
+              <div class="buttons">
+                <button type="button" class="button button--products">
+                  Products
+                </button>
+                <button type="button" class="button button--about">
+                  How it's made?
+                </button>
+              </div>
             </div>
             <div class="eco-milk">
               <img
+                class="bio-milk"
                 srcset="
                   src/images/header/milk@1x.png 1x,
                   src/images/header/milk@2x.png 2x
@@ -137,26 +146,23 @@
               <li class="statis__item">
                 <div class="statis-elips">
                   <div class="statis__item-nr">16</div>
-                  <!-- <sub><img src="src/images/header/01ellipse@1x.png" /></sub>
-                <br />-->
                   <span class="statis__span">cafes</span>
                 </div>
               </li>
               <li class="statis__item">
                 <div class="statis-elips">
                   <div class="statis__item-nr">23</div>
-                  <!--<sub><img src="src/images/header/01ellipse@1x.png" /></sub>
-                <br />-->
                   <span class="statis__span">food trucks</span>
                 </div>
               </li>
             </ul>
             <img
+              class="tasty"
               srcset="
                 src/images/header/tasty@1x.png 1x,
                 src/images/header/tasty@2x.png 2x
               "
-              src="src/images/header/tasty@2x.png"
+              src="src/images/header/tasty@1x.png"
               alt=""
             />
           </div>
@@ -168,6 +174,7 @@
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">
         <svg
+          fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -180,13 +187,18 @@
           ></path>
         </svg>
       </button>
-
+      <button type="button" class="button-buy-mobile">
+        Buy now
+        <svg class="btn-icon">
+          <use href="./src/image/symbol-defs.svg#icon-Vector-2"></use>
+        </svg>
+      </button>
       <ul class="mobile-menu">
-        <li><a class="link" href="#">Home</a></li>
-        <li><a class="link" href="#">About us</a></li>
-        <li><a class="link" href="#">How it's made?</a></li>
-        <li><a class="link" href="#">Our products</a></li>
-        <li><a class="link" href="#">Contact</a></li>
+        <li class="mobile-item"><a class="link" href="#">Home</a></li>
+        <li class="mobile-item"><a class="link" href="#">About us</a></li>
+        <li class="mobile-item"><a class="link" href="#">How it's made?</a></li>
+        <li class="mobile-item"><a class="link" href="#">Our products</a></li>
+        <li class="mobile-item"><a class="link" href="#">Contact</a></li>
       </ul>
     </div>
     <!--End Mobile Menu-->
@@ -784,5 +796,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
