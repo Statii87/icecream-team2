@@ -1,7 +1,7 @@
 .contact-section {
   margin: auto;
   padding-bottom: 40px;
-  background-color: #fff5f6;
+  background-image: linear-gradient(to bottom, $white_color 10%, $bg_color 10%);
 
   & > .container {
     margin: auto;

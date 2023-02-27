@@ -77,6 +77,10 @@
     font-weight: $fontW5;
     font-size: 16px;
     color: #907e82;
+
+    &:hover {
+      color: $title_color;
+    }
   }
 }
 

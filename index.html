@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ice Cream</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -69,7 +75,7 @@
               </li>
               <li class="nav__item"><a href="#about-us">How it's made?</a></li>
               <li class="nav__item"><a href="#products">Our products</a></li>
-              <li class="nav__item"><a href="#">Contact</a></li>
+              <li class="nav__item"><a href="#contact">Contact</a></li>
             </ul>
           </nav>
           <button type="button" class="button-buy">
@@ -421,10 +427,99 @@
             </li>
           </ul>
         </div>
+
+        <!-- customers review -->
+        <div class="customer-review">
+          <div class="review-container swiper mySwiper">
+            <ul class="reviews-customer swiper-wrapper">
+              <li class="reviews-customer-items swiper-slide">
+                <img
+                  class="customer-review__avatar_img"
+                  srcset="
+                    ./src/customers-img/customer1.png   1x,
+                    ./src/customers-img/customer1-1.png 2x
+                  "
+                  src="./src/customers-img/customer1.png"
+                  alt="customer photo"
+                />
+                <div class="customer-review-d">
+                  <p class="customer-review__description">
+                    Foarte buna inghetata 🤩 raport foarte bun calitate/preț e
+                    printre putinele locuri care au rămas la fel (calitativ) ca
+                    acum 18-20 de ani
+                  </p>
+                </div>
+
+                <svg class="dotGroup">
+                  <use href="./src/image/groupDots.svg#icon-Group-8"></use>
+                </svg>
+                <p class="customer-review__review__personaInfo">
+                  Cristina Cris, Cluj Napoca
+                </p>
+              </li>
+              <li class="reviews-customer-items swiper-slide">
+                <img
+                  class="customer-review__avatar_img"
+                  srcset="
+                    ./src/customers-img/customer2.png   1x,
+                    ./src/customers-img/customer2-1.png 2x
+                  "
+                  src=" ./src/customers-img/customer2.png "
+                  alt="customer photo"
+                />
+                <div class="customer-review-d">
+                  <p class="customer-review__description">
+                    Recomand clătitele siciliene. Gustul înghețatei ar putea fi
+                    îmbunătățit folosind tehnologii mai moderne și rețete
+                    actualizate. Există exemple de gelaterii în oraș care au
+                    înțeles acest lucru.
+                  </p>
+                </div>
+
+                <svg class="dotGroup">
+                  <use href="./src/image/groupDots.svg#icon-Group-8"></use>
+                </svg>
+                <p class="customer-review__review__personaInfo">
+                  Adriana Marian, Constanta
+                </p>
+              </li>
+              <li class="reviews-customer-items swiper-slide">
+                <img
+                  class="customer-review__avatar_img"
+                  srcset="
+                    ./src/customers-img/customer3.png   1x,
+                    ./src/customers-img/customer3-1.png 2x
+                  "
+                  src="./src/customers-img/customer3.png "
+                  alt="customer photo"
+                />
+                <div class="customer-review-d">
+                  <p class="customer-review__description">
+                    Locația este foarte curată, iar ospătarii au fost foarte
+                    atenți la detaliile comenzii clienților. Preturile sunt
+                    accesibile iar înghețata e mai mult decât delicioasa!
+                  </p>
+                </div>
+                <svg class="dotGroup">
+                  <use href="./src/image/groupDots.svg#icon-Group-8"></use>
+                </svg>
+                <p class="customer-review__review__personaInfo">
+                  Andreea is traveling, HD
+                </p>
+              </li>
+            </ul>
+            <div class="swipe-btn">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end customers review -->
       </section>
       <!--------------------SECTION 5 START  ------------------------------------------------------->
 
-      <section class="contact-section">
+      <section class="contact-section" id="contact">
         <div class="container">
           <h2 class="section__title" hidden>
             acesta este un titlu ascuns, daca l-ai vazut, inseamna ca esti mai
@@ -699,6 +794,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/modal.js"></script>
     <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
